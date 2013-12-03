@@ -1,5 +1,10 @@
-SwipeListView ([Play Store Demo][1])
+SwipeListView
 =============
+
+
+
+
+Replaced swipeOpenOnLongPress with longPressAction
 
 An Android List View implementation with support for drawable cells and many other swipe related features.
 
@@ -12,23 +17,23 @@ An Android List View implementation with support for drawable cells and many oth
 - [Demo](#demo)
 - [XML Usage](#xml-usage)
 - [License](#license)
- 
+
 Click to watch video
 
 [![SwipeListView screenshot][6]][7]
 
 # Introduction
 
-SwipeListView was born out of the need to add swipe gestures to ListView on Android for 
+SwipeListView was born out of the need to add swipe gestures to ListView on Android for
 @ [47 Degrees][4] Clients. Contributions and constructive feedback are welcome.
 
 # Download
 
 ## Maven Dependency
 
-SwipeListView may be automatically imported into your project if you already use [Maven](http://maven.apache.org/). 
+SwipeListView may be automatically imported into your project if you already use [Maven](http://maven.apache.org/).
 Just declare android-swipelistview as a maven dependency.
-If you wish to always use the latest unstable snapshots, add the Sonatype repository where the SwipeListView 
+If you wish to always use the latest unstable snapshots, add the Sonatype repository where the SwipeListView
 snapshot artifacts are being deployed.
 SwipeListView official releases will be made available at Maven Central.
 
@@ -64,7 +69,7 @@ You can get the releases, snapshots and other forms in which SwipeListView is di
 
 SwipeListView depends on the following libraries.
 
-- com.nineoldandroids 
+- com.nineoldandroids
 
 SwipeListView expects that you include one of the Google Android [compatibility libraries][3] in order to use Loaders in versions that do not support them natively.
 Depending on your requirements you may choose to include one of the following...
@@ -105,7 +110,7 @@ If you decide to use SwipeListView as a view, you can define it in your xml layo
             swipe:swipeActionRight="[reveal | dismiss]"
             swipe:swipeMode="[none | both | right | left]"
             swipe:swipeCloseAllItemsWhenMoveList="[true | false]"
-            swipe:swipeOpenOnLongPress="[true | false]"
+            swipe:longPressAction="[choice | swipeOpen]"
             swipe:swipeAnimationTime="[miliseconds]"
             swipe:swipeOffsetLeft="[dimension]"
             swipe:swipeOffsetRight="[dimension]"
@@ -118,14 +123,14 @@ If you decide to use SwipeListView as a view, you can define it in your xml layo
 * `swipeActionRight` - Optional - right swipe action Default: 'reveal'
 * `swipeMode` - Gestures to enable or 'none'. Default: 'both'
 * `swipeCloseAllItemsWhenMoveList` - Close revealed items on list motion. Default: 'true'
-* `swipeOpenOnLongPress` - Reveal on long press Default: 'true'
+* `longPressAction` - action to be done on long press Default: 'select'
 * `swipeAnimationTime` - item drop animation time. Default: android configuration
 * `swipeOffsetLeft` - left offset
 * `swipeOffsetRight` - right offset
 
 # Continuous Integration
 
-CI and Artifact Repository hosted in ClinkerHQ.com 
+CI and Artifact Repository hosted in ClinkerHQ.com
 
 [![ClinkerHQ][10]][11]
 

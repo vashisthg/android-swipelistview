@@ -19,7 +19,7 @@
 <resources>
 
     <declare-styleable name="SwipeListView">
-        <attr name="swipeOpenOnLongPress" format="boolean"/>
+        
         <attr name="swipeAnimationTime" format="integer"/>
         <attr name="swipeOffsetLeft" format="dimension"/>
         <attr name="swipeOffsetRight" format="dimension"/>
@@ -44,6 +44,11 @@
         </attr>
         <attr name="swipeDrawableChecked" format="reference"/>
         <attr name="swipeDrawableUnchecked" format="reference"/>
+        
+        <attr name="longPressAction" format="enum">         
+            <enum name="choice" value="0"/>
+            <enum name="swipeOpen" value="1"/>
+        </attr>
     </declare-styleable>
 
 </resources>
