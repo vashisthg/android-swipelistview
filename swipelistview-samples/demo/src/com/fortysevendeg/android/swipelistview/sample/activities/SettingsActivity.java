@@ -198,11 +198,11 @@ public class SettingsActivity extends Activity {
         });
 
         CheckBox cbLongPress = (CheckBox) findViewById(R.id.open_long_press);
-        cbLongPress.setChecked(settings.isSwipeOpenOnLongPress());
+        cbLongPress.setChecked(SwipeListView.LONG_PRESS_CHOICE == settings.getLongPressAction());
         cbLongPress.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                settings.setSwipeOpenOnLongPress(isChecked);
+                settings.setLongPressAction(isChecked? SwipeListView.LONG_PRESS_CHOICE : SwipeListView.LONG_PRESS_SWIPE_OPEN);
             }
         });
 

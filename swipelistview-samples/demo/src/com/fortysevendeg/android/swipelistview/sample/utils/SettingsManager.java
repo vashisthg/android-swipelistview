@@ -23,7 +23,7 @@ import com.fortysevendeg.swipelistview.SwipeListView;
 public class SettingsManager {
 
     private int swipeMode = SwipeListView.SWIPE_MODE_BOTH;
-    private boolean swipeOpenOnLongPress = true;
+    private int longPressAction = SwipeListView.LONG_PRESS_CHOICE;
     private boolean swipeCloseAllItemsWhenMoveList = true;
     private long swipeAnimationTime = 0;
     private float swipeOffsetLeft = 0;
@@ -85,12 +85,12 @@ public class SettingsManager {
         this.swipeOffsetRight = swipeOffsetRight;
     }
 
-    public boolean isSwipeOpenOnLongPress() {
-        return swipeOpenOnLongPress;
+    public int getLongPressAction() {
+        return this.longPressAction;
     }
 
-    public void setSwipeOpenOnLongPress(boolean swipeOpenOnLongPress) {
-        this.swipeOpenOnLongPress = swipeOpenOnLongPress;
+    public void setLongPressAction(int longPressAction) {
+        this.longPressAction = longPressAction;
     }
 
     public int getSwipeActionLeft() {
